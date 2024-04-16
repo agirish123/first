@@ -1,5 +1,8 @@
  name: Show GitHub context
  on: push
+ jobs:
+   my-job:
+     runs-on: ubuntu-latest
  env:
    GITHUB_CONTEXT: ${{ toJson(github) }}
  run: echo "$GITHUB_CONTEXT"
