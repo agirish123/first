@@ -1,10 +1,10 @@
- name: Show GitHub context
- on: push
- jobs:
-   my-job:
-     runs-on: ubuntu-latest
-   steps:
-      name: step
+name: Show GitHub context
+on: push
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+  steps:
+    - name: step
       env:
          GITHUB_CONTEXT: ${{ toJson(github) }}
       run: echo "$GITHUB_CONTEXT"
