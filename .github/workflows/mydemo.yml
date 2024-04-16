@@ -1,10 +1,8 @@
-name: Show GitHub context
+name: hello-world
 on: push
 jobs:
   my-job:
     runs-on: ubuntu-latest
-  steps:
-    - name: my-step
-      env:
-         GITHUB_CONTEXT: ${{ toJson(github) }}
-      run: echo "$GITHUB_CONTEXT"
+    steps:
+      - name: my-step
+        run: echo "Hello World!"
